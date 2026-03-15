@@ -128,6 +128,13 @@ En el **frontend (Blueprints P4)**:
 
 ---
 
+---
+
+## Solución:
+[Ver en PDF el Desarrollo Mediante Socket.IO](./docs/Puntos_1-2-3.pdf)
+
+---
+
 ## ⚙️ Configuración
 **Variables de entorno**
 - `PORT` (opcional): puerto del servidor (default `3001`).
