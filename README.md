@@ -29,6 +29,7 @@ React (Vite) ──(HTTP GET estado inicial)──> Express
 React (Socket.IO) ──(join-room / draw-event)──> Socket.IO Server
                                       └──(blueprint-update broadcast a sala)
 ```
+[Ver en PDF Decisiones](./docs/Decisiones.pdf)
 
 **Convenciones**
 - **Sala (room):** `blueprints.{author}.{name}`
