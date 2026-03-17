@@ -79,6 +79,17 @@ curl http://localhost:3001/api/blueprints/juan/plano-1
 
 > Este ejemplo se centra en **tiempo real**. El **CRUD completo** (POST/PUT/DELETE/list) lo implementas en tu API del curso.
 
+## 🛠️ Endpoints y Operaciones CRUD
+
+La integración se realiza mediante el módulo `createApi`, que centraliza las peticiones al backend REST para gestionar la persistencia de los planos:
+
+| Operación | Método | Endpoint | Descripción |
+| :--- | :--- | :--- | :--- |
+| **Listar** | `GET` | `/api/blueprints?author={author}` | Obtiene la lista de planos y el total de puntos por autor. |
+| **Consultar** | `GET` | `/api/blueprints/{author}/{name}` | Recupera los puntos específicos de un plano. |
+| **Crear** | `POST` | `/api/blueprints` | Registra un nuevo plano (se inicializa con `points: []`). |
+| **Actualizar** | `PUT` | `/api/blueprints/{author}/{name}` | Persiste los puntos dibujados en el canvas al servidor. |
+| **Eliminar** | `DELETE` | `/api/blueprints/{author}/{name}` | Borra el plano de forma definitiva del servidor. |
 ---
 
 ## 🔴 Eventos Socket.IO
@@ -126,11 +137,8 @@ En el **frontend (Blueprints P4)**:
    ```
 3. En la UI, selecciona **Socket.IO** como tecnología RT, elige `autor` y `plano`, abre **dos pestañas** y haz clic en el canvas: verás el trazo replicado.
 
----
-
----
-
 ## Solución:
+
 [Ver en PDF el Desarrollo Mediante Socket.IO](./docs/Puntos_1-2-3.pdf)
 
 ---
@@ -148,6 +156,16 @@ En el **frontend (Blueprints P4)**:
   }
 }
 ```
+
+## 📊 Entregables del equipo
+Código del Front integrado con CRUD y RT (Socket.IO o STOMP).
+Video corto (≤ 90s) mostrando colaboración en vivo y operaciones CRUD.
+README del equipo: setup, endpoints usados, decisiones (rooms/tópicos), y (opcional) breve comparativa Socket.IO vs STOMP.
+
+[Ver en PDF Comparativa](./docs/Comparativa.pdf)
+
+**Video colaboración en vivo:**
+https://youtu.be/Z3-lL04lpyM
 
 ---
 
@@ -184,5 +202,4 @@ En el **frontend (Blueprints P4)**:
 - [ ] `draw-event` → broadcast `blueprint-update` a la sala.  
 - [ ] Front refleja el trazo en **< 1s** en 2+ pestañas.  
 - [ ] Domento de laboratorio donde explica **setup** e **integración** con el front.
-
 ---
